@@ -1,0 +1,46 @@
+site_name: Robotics Learning Portal
+site_url: https://eyantra_club.com
+
+theme:
+  name: material
+  logo: assets/college_logo.png
+  favicon: assets/college_logo.png
+  features:
+    - navigation.tabs        # Creates the top horizontal menu
+    - navigation.sections    # Organizes the sidebar
+    - toc.integrate          # Table of contents on the right
+    - navigation.top         # 'Back to top' button
+    - search.suggest         # Intelligent search bar
+  palette: 
+    - scheme: default
+      primary: indigo        # Main color (Blue-ish)
+      accent: teal           # Highlight color
+
+# Extensions to make code and diagrams look good
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:      # <--- THIS FIXES THE ICONS
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg         # For centering images
+
+# YOUR WEBSITE MENU STRUCTURE
+nav:
+  - Home: index.md
+  - 'Learning Portal':
+      - 'Curriculum Overview': learning/index.md
+      - 'Module 1: Drone Anatomy': learning/drone-anatomy.md
+      - 'Module 2: ROS TurtleSim': learning/ros-intro.md
+      - 'Module 3: PID Control': learning/learning/pid.md
+      - 'Module 4: Color Vision': learning/color-vision.md
+      - 'Module 5: RL & AI': learning/rl-intro.md
+      - 'Module 6: Vision & ArUco': learning/aruco.md
+  - 'Project Showcase': projects.md
+  - 'About Us': about.md
+  - 'Contact': contact.md
+
+extra_css:
+  - stylesheets/extra.css
